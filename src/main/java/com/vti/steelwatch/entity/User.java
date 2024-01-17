@@ -39,4 +39,12 @@ public class User {
     @CreationTimestamp
     private LocalDateTime updatedAt;
 
+    @ManyToMany(fetch = FetchType.EAGER)
+    @JoinTable(
+            name = "user_role",
+            joinColumns = @JoinColumn(name = "user_id",nullable = false),
+            inverseJoinColumns = @JoinColumn(name = "role_id", nullable = false)
+    )
+    private Set<Role> roles;
+
 }

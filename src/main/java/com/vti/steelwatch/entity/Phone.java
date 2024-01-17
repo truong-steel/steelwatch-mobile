@@ -1,6 +1,7 @@
 package com.vti.steelwatch.entity;
 
 import jakarta.persistence.*;
+import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.Setter;
@@ -8,6 +9,7 @@ import lombok.Setter;
 import java.time.LocalDate;
 import java.util.List;
 
+@Data
 @Getter
 @Setter
 @Entity
